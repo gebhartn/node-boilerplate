@@ -9,7 +9,7 @@
     "build": "yarn clean && babel src -d dist",
     "clean": "rimraf dist",
     "start": "yarn build && pm2 start ecosystem.config.json --no-daemon",
-    "start:dev": "nodemon -r dotenv/config --exec babel-node src/index",
+    "start:dev": "cross-env NODE_ENV=development nodemon -r dotenv/config --exec babel-node src/index",
     "test": "jest -i",
     "test:watch": "jest -i --watchAll",
     "coverage": "jest -i --coverage --forceExit || true",
@@ -46,6 +46,7 @@
     "@babel/node": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/runtime": "^7.12.1",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "pm2": "^4.5.0",
     "winston": "^3.3.3"
