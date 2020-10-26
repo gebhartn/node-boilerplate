@@ -16,10 +16,6 @@ export default function makeLogger({ winston }) {
       winston.format.splat(),
       winston.format.printf(({ level, message }) => `${level}: ${message}`),
     ),
-    transports: [
-      new winston.transports.File({ filename: `error.log`, level: `error` }),
-      new winston.transports.File({ filename: `combined.log` }),
-      new winston.transports.Console({ stderrLevels: [`error`] }),
-    ],
+    transports: [new winston.transports.Console({ stderrLevels: [`error`] })],
   })
 }
