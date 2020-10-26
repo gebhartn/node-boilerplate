@@ -1,4 +1,4 @@
-name: build
+name: Code Coverage
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   coverage:
-    name: Test and publish test coverage
+    name: Code Coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
