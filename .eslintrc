@@ -22,5 +22,10 @@
         "ignoreRegExpLiterals": true
       }
     ]
+  },
+  "settings": {
+    "jest": {
+      "version": 26
+    }
   }
 }
