@@ -8,6 +8,8 @@ An opinionated node.js boilerplate application that includes a lot of boilerplat
 ## Getting started
 This repo is marked as a template, so click `Use this template` to create a new project. Next, head over to [Code Climate](https://codeclimate.com/oss/) and point it to your repo. Once there, you can configure the test watcher by clicking the `Repo Settings` tab, and then the `Test coverage` button to get your test reporter ID. Copy it and add it as an environment variable to your github repo with the key of `CC_REPORTER_ID`
 
+Additionally, for the ci/cd pipeline to succeed you must also include `DOCKER_PASSWORD` and `DOCKER_USER` credentials to the repository secrets to push to DockerHub.
+
 ## Author
 - [Nicholas Gebhart](https://github.com/gebhartn)
 
