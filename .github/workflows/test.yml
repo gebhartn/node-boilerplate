@@ -23,3 +23,15 @@ jobs:
           coverageCommand: yarn coverage
           coverageLocations: "./coverage/clover.xml:clover"
           debug: true
+
+  publish:
+    runs-on: ubuntu-latest
+    container:
+      image: node
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Publish
+        run: |
+          yarn
+          yarn release
